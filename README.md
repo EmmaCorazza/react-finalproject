@@ -1,6 +1,6 @@
 **FitnessFusion Workouts**
 
-Link to deployed site:
+Link to deployed site: https://fitnessfusionworkout.netlify.app/ 
 
 **Project Description**
 FitnessFusion Workouts is an application designed to provide users with workout exercises, covering different fitness categories such as Cardio, Strength, Stretching, Powerlifting, Olympic Weightlifting, Strongman, and Plyometrics. Users can explore and choose exercises based on which category they want to train and musclegroup under stenght. Perfect if you lack of inspiration for your next workout!
