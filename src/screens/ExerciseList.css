@@ -1,0 +1,81 @@
+h2 {
+  color: #c16b6b;
+  padding-left: 40px;
+}
+
+.label-container {
+  margin-bottom: 10px;
+}
+
+label {
+  padding-left: 40px;
+  padding-bottom: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  max-width: 30%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.exercise-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #37393d;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: calc(33.33% - 30px);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.choose-btn {
+  background-color: #c16b6b;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.choose-btn:hover {
+  background-color: #a55252;
+}
+
+/* Tablet 750px and smaller */
+@media (max-width: 750px) {
+  .exercise-box {
+    width: calc(50% - 20px);
+  }
+
+  select {
+    max-width: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  .choose-btn {
+    margin-top: 20px;
+  }
+}
+
+/* Phone 450px and smaller */
+@media (max-width: 450px) {
+  .exercise-box {
+    width: calc(100% - 20px);
+  }
+}

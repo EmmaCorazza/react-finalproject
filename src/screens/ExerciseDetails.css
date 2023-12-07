@@ -1,0 +1,35 @@
+.card {
+  background-image: url("./src/img/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px;
+}
+
+.container2 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.details-btn {
+  padding: 10px 20px;
+  background-color: #c16b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.details-btn:hover {
+  background-color: #a55252;
+}
+
+/* Phone 450px and smaller */
+@media (max-width: 450px) {
+}
