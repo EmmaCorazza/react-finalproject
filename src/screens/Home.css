@@ -31,11 +31,11 @@ h1 {
   color: #c16b6b;
 }
 .iamready-btn {
-  background-color: #c16b6b;
+  background-color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   cursor: pointer;
 }
