@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExercises } from "../actions";
-import ExerciseDetails from "./ExerciseDetails";
+import { Link } from "react-router-dom";
+import { fetchExercises } from "../exerciseSlice";
 import "./ExerciseList.css";
 
 const ExerciseList = () => {
   const dispatch = useDispatch();
-  const { exercises } = useSelector((state) => state.exercise);
+  const { exercises, status, error } = useSelector((state) => state.exercise);
   const [category, setCategory] = useState(undefined);
   const [muscle, setMuscle] = useState(undefined);
-  const [exeriseDetailsIndex, setExeriseDetailsIndex] = useState(undefined);
 
   useEffect(() => {
     if (category) {
-      dispatch(fetchExercises(category, muscle));
+      dispatch(fetchExercises({ category, muscle }));
     }
   }, [dispatch, category, muscle]);
 
@@ -25,17 +24,12 @@ const ExerciseList = () => {
     setMuscle(event.target.value);
   };
 
-  const handleGoBack = () => {
-    setExeriseDetailsIndex(undefined);
-  };
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
 
-  if (exeriseDetailsIndex !== undefined) {
-    return (
-      <ExerciseDetails
-        exercise={exercises[exeriseDetailsIndex]}
-        onGoBack={handleGoBack}
-      />
-    );
+  if (status === "failed") {
+    return <div>Error: {error}</div>;
   }
 
   return (
@@ -82,12 +76,9 @@ const ExerciseList = () => {
           <div key={index} className="exercise-box">
             <h3>{exercise.name}</h3>
             <p>Difficulty level: {exercise.difficulty}</p>
-            <button
-              onClick={() => setExeriseDetailsIndex(index)}
-              className="choose-btn"
-            >
-              Excercise details
-            </button>
+            <Link to={`/ExerciseList/${index}`} className="choose-btn">
+              Exercise details
+            </Link>
           </div>
         ))}
       </ul>

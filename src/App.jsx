@@ -1,16 +1,11 @@
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home";
 import ExerciseList from "./screens/ExerciseList";
 import NavBar from "./component/NavBar";
 import { Provider } from "react-redux";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import exerciseReducer from "./reducers";
-
-const reducer = combineReducers({
-  exercise: exerciseReducer,
-});
-
-const store = configureStore({ reducer });
+import { store } from "./store";
+import ExerciseDetails from "./screens/ExerciseDetails";
 
 function App() {
   return (
@@ -21,6 +16,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ExerciseList" element={<ExerciseList />} />
+            <Route
+              path="/ExerciseList/:exerciseId"
+              element={<ExerciseDetails />}
+            />
           </Routes>
         </main>
       </BrowserRouter>
