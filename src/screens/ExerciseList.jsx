@@ -75,7 +75,9 @@ const ExerciseList = () => {
         {exercises.map((exercise, index) => (
           <div key={index} className="exercise-box">
             <h3>{exercise.name}</h3>
-            <p>Difficulty level: {exercise.difficulty}</p>
+            <p className="difficulty">
+              Difficulty level: {exercise.difficulty}
+            </p>
             <Link to={`/ExerciseList/${index}`} className="choose-btn">
               Exercise details
             </Link>

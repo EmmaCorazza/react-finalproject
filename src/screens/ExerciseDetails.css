@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+.container2 p {
+  padding-bottom: 20px;
+}
+
 .details-btn {
   padding: 10px 20px;
   background-color: #c16b6b;
