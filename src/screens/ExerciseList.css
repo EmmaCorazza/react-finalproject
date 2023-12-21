@@ -43,7 +43,7 @@ ul {
 
 .choose-btn {
   background-color: #c16b6b;
-  color: #fff;
+  color: black;
   border: none;
   padding: 8px 15px;
   font-size: 14px;
@@ -53,13 +53,14 @@ ul {
 
 .choose-btn:hover {
   background-color: #a55252;
+  color: #222;
 }
 
 .difficulty {
   padding-bottom: 20px;
 }
 
-/* Tablet 900px and smaller */
+/* Tablet 800px and smaller */
 @media (max-width: 800px) {
   .exercise-box {
     width: calc(50% - 10px);

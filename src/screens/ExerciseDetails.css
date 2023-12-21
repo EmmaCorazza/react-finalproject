@@ -23,7 +23,7 @@
 .details-btn {
   padding: 10px 20px;
   background-color: #c16b6b;
-  color: #fff;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -32,6 +32,7 @@
 
 .details-btn:hover {
   background-color: #a55252;
+  color: #222;
 }
 
 /* Phone 450px and smaller */
