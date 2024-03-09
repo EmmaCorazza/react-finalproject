@@ -6,6 +6,7 @@ import NavBar from "./component/NavBar";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import ExerciseDetails from "./screens/ExerciseDetails";
+import Inspo from "./screens/Inspo";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Inspo" element={<Inspo />} />
             <Route path="/ExerciseList" element={<ExerciseList />} />
             <Route
               path="/ExerciseList/:exerciseId"
